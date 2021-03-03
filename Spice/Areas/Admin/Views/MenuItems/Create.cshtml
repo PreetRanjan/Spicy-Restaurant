@@ -1,0 +1,136 @@
+﻿@model Spice.Models.ViewModels.MenuItemViewModel
+@using Spice.Extensions
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<h2 class="text-info">Create MenuItem</h2>
+<br />
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    @Html.TextBoxFor(m=>m.MenuItem.Slug,new { value = "dummy" })
+    <div class="border background-white">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.Name" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MenuItem.Name" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.Name"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.Description" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                @Html.TextAreaFor(c => c.MenuItem.Description, new { @class = "form-control" })
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.Description"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.Price" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MenuItem.Price" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.Price"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.CatagorId" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <select asp-for="MenuItem.CatagorId" id="CatagoryId" asp-items="@Model.Catagories.ToSelectList(Model.MenuItem.CatagorId)" class="form-control"></select>
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.CatagorId"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.SubCatagorId" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <select asp-for="MenuItem.SubCatagorId" name="SubCatagoryId" id="SubCatagoryId" asp-items="@(new SelectList(string.Empty,"Id","Name"))" class="form-control"></select>
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.SubCatagorId"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.Spicyness" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <select asp-for="MenuItem.Spicyness" id="CatagoryId" asp-items="Html.GetEnumSelectList<ESpicy>()" class="form-control"></select>
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.Spicyness"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Thumbnail" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Thumbnail" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="MenuItem.Image"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.IsFeatured" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" asp-for="MenuItem.IsFeatured" class="custom-control-input" id="customSwitch1" checked="">
+                    <label class="custom-control-label" for="customSwitch1">Toggle this Make it Featured</label>
+                </div>
+
+            </div>
+
+            <span class="text-danger" asp-validation-for="MenuItem.IsFeatured"></span>
+
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-5 offset-2">
+                <partial name="_CreateAndBacktoList" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <script src="https://cdn.tiny.cloud/1/8dktvv2f05lj8ztsbkbsey3orzs59dn1vzqgmg0jf92d5yqu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea",
+            plugins: "lists",
+            menubar: "file edit format"
+        });
+    </script>
+
+    <script>
+    function getSubCatList() {
+        var url = '@Url.Content("~/")' + "Admin/SubCatagory/GetSubCatagory";
+        var ddlSource = '#CatagoryId';
+        $.getJSON(url, { id: $(ddlSource).val() }, function (data) {
+            console.log(data);
+            var items = '';
+            $("#SubCatagoryId").empty();
+            $.each(data, function (i, subcat) {
+                items += '<option value="' + subcat.id + '">' + subcat.name + '</option>';
+            });
+            $("#SubCatagoryId").html(items);
+        });
+    }
+    $(document).ready(function () {
+        getSubCatList();
+    });
+    $('#CatagoryId').on('change', function () {
+
+        getSubCatList();
+    });
+    </script>
+}

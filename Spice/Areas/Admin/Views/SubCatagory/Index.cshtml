@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SubCatagory>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="background-white border">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="text-dark">Sub-Category List</h3>
+            <h6 class="text-muted">Add a new sub catagory</h6>
+        </div>
+        <div class="col-6 text-right">
+            <partial name="_CreateButton" />
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() == 0)
+    {
+        <p>No SubCategory Exists</p>
+    }
+    else
+    {
+        <table id="MyTable" class="table table-striped table-hover table-borderless">
+            <thead>
+                <tr class="text-dark">
+                    <th class="border-right">@Html.DisplayNameFor(m => m.FirstOrDefault().Name)</th>
+                    <th class="border-right">Catagory</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <h6>@Html.DisplayFor(m => item.Name)</h6>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Catagory.Name)
+                        </td>
+                        <partial name="_EditDeleteButtons" model="item.Id" />
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div id="paging-first-datatable"></div>
+    }
+
+</div>
+
+
+@section Scripts{
+    <partial name="_DataTableScriptsPartial" />
+    <script>
+    var datatable = new DataTable(document.getElementById('MyTable'), {
+        pageSize: 7,
+        sort: [true, true, true,true],
+        filters: [true, 'select'],
+        filterText: 'Type to filter... ',
+        pagingDivSelector: "#paging-first-datatable"
+    });
+    $(document).ready(function () {
+        $(".pagination").removeClass("pagination").addClass("pagination-n");
+    });
+    </script>
+}

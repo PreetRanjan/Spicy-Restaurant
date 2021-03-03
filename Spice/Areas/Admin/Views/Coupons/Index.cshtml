@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Coupon>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="background-white border">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="text-dark">Coupon List</h3>
+            <h6 class="text-muted">Showing all coupons</h6>
+        </div>
+        <div class="col-6 text-right">
+            <partial name="_CreateButton" />
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() == 0)
+    {
+        <p>No Coupons Exists</p>
+    }
+    else
+    {
+        <table id="MyTable" class="table table-striped table-hover table-borderless table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Name)</th>
+
+                    <th>@Html.DisplayNameFor(m => m.FirstOrDefault().CouponType)</th>
+                    <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Discount)</th>
+                    <th>@Html.DisplayNameFor(m => m.FirstOrDefault().MinimumAmount)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="text-center">
+                    <td>
+                        <h4 class="text-primary">@item.Name.ToUpper()</h4>
+                    </td>
+                    <td>
+                        <h6 class="text-dark">@Html.DisplayFor(m => item.CouponType)</h6>
+                    </td>
+                    <td>
+                        <h6 class="text-dark">@Html.DisplayFor(m => item.Discount)</h6>
+                    </td>
+                    <td>
+                        <h6 class="text-success">₹ @Html.DisplayFor(m => item.MinimumAmount) /-</h6>
+                    </td>
+                    <partial name="_EditDeleteButtons" model="item.Id" />
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div id="paging-first-datatable"></div>
+
+    }
+
+</div>
+
+@section Scripts{
+    <partial name="_DataTableScriptsPartial" />
+    <script>
+        var datatable = new DataTable(document.getElementById('MyTable'), {
+            pageSize: 7,
+            sort: [true, true, true, true],
+            filters: [true, 'select', true, true],
+            filterText: 'Type to filter... ',
+            pagingDivSelector: "#paging-first-datatable"
+        });
+        $(document).ready(function () {
+            $(".pagination").removeClass("pagination").addClass("pagination-n");
+        });
+    </script>
+}

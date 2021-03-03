@@ -1,0 +1,80 @@
+﻿@model Spice.Models.ViewModels.MenuItemViewModel
+@using Spice.Extensions
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">MenuItem Details - @Model.MenuItem.Name</h2>
+<hr />
+<br />
+<form method="post" asp-action="Delete" autocomplete="off">
+    <div class="border background-white">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="d-block mx-auto" src="@Model.MenuItem.Image" />
+            </div>
+            <div class="col-md-8">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="MenuItem.Name" class="col-form-label"></label>
+                    </div>
+                    <div class="col-9">
+                        <h5>@Model.MenuItem.Name</h5>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="MenuItem.Description" class="col-form-label"></label>
+                    </div>
+                    <div class="col-9">
+                        @Html.Raw(Model.MenuItem.Description)
+
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="MenuItem.Price" class="col-form-label"></label>
+                    </div>
+                    <div class="col-9">
+                        <h5>₹ @Model.MenuItem.Price /-</h5>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label class="col-form-label">Category</label>
+                    </div>
+                    <div class="col-9">
+                        <h5>@Model.MenuItem.Catagory.Name</h5>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label class="col-form-label">Sub-Category</label>
+                    </div>
+                    <div class="col-9">
+                        <h5>@Model.MenuItem.SubCatagory.Name</h5>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="MenuItem.Spicyness" class="col-form-label"></label>
+                    </div>
+                    <div class="col-9">
+                        <h5>@Model.MenuItem.Spicyness</h5>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-5 offset-4">
+                        <partial name="_DeleteAndBacktoList" model="Model.MenuItem.Id" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

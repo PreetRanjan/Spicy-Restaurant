@@ -1,0 +1,421 @@
+2020-10-21 19:17:49.966 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-10-21 19:17:53.363 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-10-21 19:17:53.367 +05:30 [Information] Hosting environment: "Development"
+2020-10-21 19:17:53.369 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-10-21 19:17:53.460 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-21 19:17:53.765 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:17:53.946 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:17:56.972 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:17:58.777 +05:30 [Information] Executed DbCommand ("165"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-21 19:17:58.918 +05:30 [Information] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-21 19:17:59.006 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:17:59.506 +05:30 [Information] Executed ViewResult - view "Index" executed in 559.2748ms.
+2020-10-21 19:17:59.509 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 5559.4465ms
+2020-10-21 19:17:59.511 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:17:59.535 +05:30 [Information] Request finished in 6082.5907ms 200 text/html; charset=utf-8
+2020-10-21 19:17:59.904 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/css/standard.min.css  
+2020-10-21 19:17:59.905 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/designs/spiceLogoonly.png  
+2020-10-21 19:17:59.947 +05:30 [Information] The file "/images/designs/spiceLogoonly.png" was not modified
+2020-10-21 19:17:59.949 +05:30 [Information] Request finished in 44.2084ms 304 image/png
+2020-10-21 19:17:59.981 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:18:00.000 +05:30 [Information] Request finished in 19.1252ms 404 
+2020-10-21 19:18:00.066 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/js/standard.min.js  
+2020-10-21 19:18:00.066 +05:30 [Information] The file "/js/standard.min.js" was not modified
+2020-10-21 19:18:00.067 +05:30 [Information] Request finished in 0.5254ms 304 application/javascript
+2020-10-21 19:18:00.205 +05:30 [Information] Sending file. Request path: '"/css/standard.min.css"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\css\standard.min.css"'
+2020-10-21 19:18:00.205 +05:30 [Information] Request finished in 300.9427ms 200 text/css
+2020-10-21 19:18:00.738 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:18:00.747 +05:30 [Information] Request finished in 8.5256ms 404 
+2020-10-21 19:18:57.498 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/butter-naan  
+2020-10-21 19:18:57.508 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:18:57.527 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:18:57.618 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:18:57.765 +05:30 [Information] Executed DbCommand ("107"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:18:57.874 +05:30 [Information] Executed DbCommand ("17"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:18:58.056 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-10-21 19:18:58.223 +05:30 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-10-21 19:18:58.274 +05:30 [Information] Executed ViewResult - view "Details" executed in 226.4631ms.
+2020-10-21 19:18:58.277 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 749.559ms
+2020-10-21 19:18:58.278 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:18:58.281 +05:30 [Information] Request finished in 783.745ms 200 text/html; charset=utf-8
+2020-10-21 19:18:58.366 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.css  
+2020-10-21 19:18:58.367 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.js  
+2020-10-21 19:18:58.388 +05:30 [Information] The file "/lib/snackbar/snackbar.min.css" was not modified
+2020-10-21 19:18:58.389 +05:30 [Information] Request finished in 23.2339ms 304 text/css
+2020-10-21 19:18:58.393 +05:30 [Information] The file "/lib/snackbar/snackbar.min.js" was not modified
+2020-10-21 19:18:58.393 +05:30 [Information] Request finished in 26.6419ms 304 application/javascript
+2020-10-21 19:19:06.495 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 21
+2020-10-21 19:19:06.511 +05:30 [Information] Authorization failed.
+2020-10-21 19:19:06.515 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-10-21 19:19:06.516 +05:30 [Information] Request finished in 24.3472ms 401 
+2020-10-21 19:19:14.103 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-21 19:19:14.108 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:19:14.109 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:19:14.149 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:19:14.164 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-21 19:19:14.167 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-21 19:19:14.169 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:19:14.188 +05:30 [Information] Executed ViewResult - view "Index" executed in 19.5418ms.
+2020-10-21 19:19:14.188 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 78.7672ms
+2020-10-21 19:19:14.188 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:19:14.189 +05:30 [Information] Request finished in 86.1561ms 200 text/html; charset=utf-8
+2020-10-21 19:19:14.248 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:19:14.256 +05:30 [Information] Request finished in 8.5613ms 404 
+2020-10-21 19:19:16.356 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/butter-naan  
+2020-10-21 19:19:16.362 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:19:16.363 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:19:16.426 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:19:16.459 +05:30 [Information] Executed DbCommand ("29"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:19:16.474 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:19:16.477 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-10-21 19:19:16.502 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-10-21 19:19:16.506 +05:30 [Information] Executed ViewResult - view "Details" executed in 29.358ms.
+2020-10-21 19:19:16.506 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 143.2548ms
+2020-10-21 19:19:16.506 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:19:16.507 +05:30 [Information] Request finished in 150.7901ms 200 text/html; charset=utf-8
+2020-10-21 19:21:44.642 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-10-21 19:21:44.672 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-10-21 19:21:44.695 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-10-21 19:21:44.724 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-10-21 19:21:44.741 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-10-21 19:21:44.748 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-10-21 19:21:44.754 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-10-21 19:21:44.754 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-10-21 19:21:44.850 +05:30 [Information] Executed page "/Account/Login" in 154.2193ms
+2020-10-21 19:21:44.850 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-10-21 19:21:44.850 +05:30 [Information] Request finished in 231.6461ms 200 text/html; charset=utf-8
+2020-10-21 19:22:08.433 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/identity/account/login application/x-www-form-urlencoded 237
+2020-10-21 19:22:08.454 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-10-21 19:22:08.456 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-10-21 19:22:08.570 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid
+2020-10-21 19:22:08.609 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:22:08.709 +05:30 [Information] Executed DbCommand ("74"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Discriminator] IN (N'IdentityUser', N'AppUser') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)"
+2020-10-21 19:22:08.913 +05:30 [Warning] Invalid password for user "81b9ab30-f2c5-450b-9640-573dd3898de0".
+2020-10-21 19:22:08.915 +05:30 [Warning] User "81b9ab30-f2c5-450b-9640-573dd3898de0" failed to provide the correct password.
+2020-10-21 19:22:08.919 +05:30 [Information] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-10-21 19:22:08.930 +05:30 [Information] Executed page "/Account/Login" in 473.8833ms
+2020-10-21 19:22:08.930 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-10-21 19:22:08.931 +05:30 [Information] Request finished in 497.8273ms 200 text/html; charset=utf-8
+2020-10-21 19:22:18.905 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/identity/account/login application/x-www-form-urlencoded 242
+2020-10-21 19:22:18.907 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-10-21 19:22:18.909 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-10-21 19:22:18.916 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid
+2020-10-21 19:22:18.917 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:22:18.928 +05:30 [Information] Executed DbCommand ("7"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Discriminator] IN (N'IdentityUser', N'AppUser') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)"
+2020-10-21 19:22:19.069 +05:30 [Information] Executed DbCommand ("11"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0"
+2020-10-21 19:22:19.127 +05:30 [Information] Executed DbCommand ("16"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0"
+2020-10-21 19:22:19.139 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0"
+2020-10-21 19:22:19.161 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0"
+2020-10-21 19:22:19.171 +05:30 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2020-10-21 19:22:19.185 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Input_Email_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Email] = @__Input_Email_0)"
+2020-10-21 19:22:19.221 +05:30 [Information] Executed DbCommand ("14"ms) [Parameters=["@__userId_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM([s].[Count])
+FROM [ShoppingCarts] AS [s]
+WHERE [s].[AppUserId] = @__userId_0"
+2020-10-21 19:22:19.227 +05:30 [Information] User 81b9ab30-f2c5-450b-9640-573dd3898de0 logged in.
+2020-10-21 19:22:19.228 +05:30 [Information] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.LocalRedirectResult".
+2020-10-21 19:22:19.230 +05:30 [Information] Executing LocalRedirectResult, redirecting to "/".
+2020-10-21 19:22:19.230 +05:30 [Information] Executed page "/Account/Login" in 320.5489ms
+2020-10-21 19:22:19.230 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-10-21 19:22:19.232 +05:30 [Information] Session started; Key:"8f23b6c9-4cc2-1d35-8c95-944acfb41d69", Id:"c0b3f4e5-6551-c683-5ccb-e0ba408bb880"
+2020-10-21 19:22:19.246 +05:30 [Information] Request finished in 340.5309ms 302 
+2020-10-21 19:22:19.252 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-21 19:22:19.261 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:22:19.262 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:22:19.278 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:22:19.286 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-21 19:22:19.289 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-21 19:22:19.300 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ShoppingCarts] AS [s]
+WHERE [s].[AppUserId] = @__userId_0"
+2020-10-21 19:22:19.301 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:22:19.325 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:22:19.352 +05:30 [Information] Executed ViewResult - view "Index" executed in 50.6814ms.
+2020-10-21 19:22:19.352 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 90.2671ms
+2020-10-21 19:22:19.352 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:22:19.360 +05:30 [Information] Request finished in 108.893ms 200 text/html; charset=utf-8
+2020-10-21 19:22:19.436 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:22:19.444 +05:30 [Information] Request finished in 8.8582ms 404 
+2020-10-21 19:23:22.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/kulfi  
+2020-10-21 19:23:22.424 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:23:22.424 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:23:22.441 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:23:22.457 +05:30 [Information] Executed DbCommand ("14"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:23:22.467 +05:30 [Information] Executed DbCommand ("7"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-21 19:23:22.469 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-10-21 19:23:22.489 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-10-21 19:23:22.498 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:23:22.526 +05:30 [Information] Executed ViewResult - view "Details" executed in 56.7273ms.
+2020-10-21 19:23:22.526 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 101.9454ms
+2020-10-21 19:23:22.526 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-21 19:23:22.527 +05:30 [Information] Request finished in 106.9775ms 200 text/html; charset=utf-8
+2020-10-21 19:23:32.212 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-21 19:23:32.219 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:23:32.219 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:23:32.234 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:23:32.244 +05:30 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-21 19:23:32.258 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-21 19:23:32.285 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ShoppingCarts] AS [s]
+WHERE [s].[AppUserId] = @__userId_0"
+2020-10-21 19:23:32.286 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:23:32.293 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:23:32.298 +05:30 [Information] Executed ViewResult - view "Index" executed in 11.9973ms.
+2020-10-21 19:23:32.299 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 79.0168ms
+2020-10-21 19:23:32.299 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:23:32.299 +05:30 [Information] Request finished in 87.6749ms 200 text/html; charset=utf-8
+2020-10-21 19:23:32.371 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:23:32.378 +05:30 [Information] Request finished in 7.0944ms 404 
+2020-10-21 19:24:08.426 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/subcatagory  
+2020-10-21 19:24:08.441 +05:30 [Information] Authorization was successful.
+2020-10-21 19:24:08.442 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)"'
+2020-10-21 19:24:08.449 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"SubCatagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.SubCatagoryController" ("Spice").
+2020-10-21 19:24:08.477 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:24:08.514 +05:30 [Information] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[Id], [s].[CatagoryId], [s].[Name], [c].[Id], [c].[Description], [c].[Name]
+FROM [SubCatagories] AS [s]
+INNER JOIN [Catagories] AS [c] ON [s].[CatagoryId] = [c].[Id]"
+2020-10-21 19:24:08.541 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:24:08.605 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:24:08.629 +05:30 [Information] Executed ViewResult - view "Index" executed in 112.1491ms.
+2020-10-21 19:24:08.629 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)" in 180.6702ms
+2020-10-21 19:24:08.630 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)"'
+2020-10-21 19:24:08.630 +05:30 [Information] Request finished in 203.9859ms 200 text/html; charset=utf-8
+2020-10-21 19:24:08.697 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/jquery-datatable/js/datatable.js  
+2020-10-21 19:24:08.699 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/jquery-datatable/css/datatable-bootstrap.min.css  
+2020-10-21 19:24:08.708 +05:30 [Information] Sending file. Request path: '"/lib/jquery-datatable/css/datatable-bootstrap.min.css"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\lib\jquery-datatable\css\datatable-bootstrap.min.css"'
+2020-10-21 19:24:08.708 +05:30 [Information] Request finished in 9.2178ms 200 text/css
+2020-10-21 19:24:08.788 +05:30 [Information] Sending file. Request path: '"/lib/jquery-datatable/js/datatable.js"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\lib\jquery-datatable\js\datatable.js"'
+2020-10-21 19:24:08.788 +05:30 [Information] Request finished in 90.7478ms 200 application/javascript
+2020-10-21 19:24:08.804 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/jquery-datatable/img/sort_both.png  
+2020-10-21 19:24:08.815 +05:30 [Information] Sending file. Request path: '"/lib/jquery-datatable/img/sort_both.png"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\lib\jquery-datatable\img\sort_both.png"'
+2020-10-21 19:24:08.815 +05:30 [Information] Request finished in 11.0172ms 200 image/png
+2020-10-21 19:24:41.428 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/catagory  
+2020-10-21 19:24:41.431 +05:30 [Information] Authorization was successful.
+2020-10-21 19:24:41.432 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:24:41.441 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Catagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.CatagoryController" ("Spice").
+2020-10-21 19:24:41.454 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:24:41.464 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Catagories] AS [c]"
+2020-10-21 19:24:41.474 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:24:41.495 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:24:41.506 +05:30 [Information] Executed ViewResult - view "Index" executed in 40.4237ms.
+2020-10-21 19:24:41.506 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)" in 65.5278ms
+2020-10-21 19:24:41.506 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:24:41.507 +05:30 [Information] Request finished in 79.2574ms 200 text/html; charset=utf-8
+2020-10-21 19:26:13.972 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/catagory  
+2020-10-21 19:26:13.975 +05:30 [Information] Authorization was successful.
+2020-10-21 19:26:13.975 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:26:13.985 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Catagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.CatagoryController" ("Spice").
+2020-10-21 19:26:13.986 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:26:13.996 +05:30 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Catagories] AS [c]"
+2020-10-21 19:26:30.420 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:26:30.442 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:26:30.447 +05:30 [Information] Executed ViewResult - view "Index" executed in 16449.6936ms.
+2020-10-21 19:26:30.447 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)" in 16462.4584ms
+2020-10-21 19:26:30.447 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:26:30.448 +05:30 [Information] Request finished in 16475.6854ms 200 text/html; charset=utf-8
+2020-10-21 19:26:30.621 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-10-21 19:26:30.659 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-10-21 19:26:30.659 +05:30 [Information] Request finished in 38.4047ms 200 image/x-icon
+2020-10-21 19:26:43.424 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/catagory  
+2020-10-21 19:26:43.428 +05:30 [Information] Authorization was successful.
+2020-10-21 19:26:43.428 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:26:43.436 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Catagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.CatagoryController" ("Spice").
+2020-10-21 19:26:43.438 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:26:43.441 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Catagories] AS [c]"
+2020-10-21 19:26:43.829 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:26:43.846 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:26:43.853 +05:30 [Information] Executed ViewResult - view "Index" executed in 409.8614ms.
+2020-10-21 19:26:43.853 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)" in 416.7192ms
+2020-10-21 19:26:43.853 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:26:43.853 +05:30 [Information] Request finished in 429.2446ms 200 text/html; charset=utf-8
+2020-10-21 19:26:43.993 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-10-21 19:26:43.996 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-10-21 19:26:43.996 +05:30 [Information] Request finished in 4.2019ms 200 image/x-icon
+2020-10-21 19:26:59.687 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/subcatagory  
+2020-10-21 19:26:59.694 +05:30 [Information] Authorization was successful.
+2020-10-21 19:26:59.694 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)"'
+2020-10-21 19:26:59.699 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"SubCatagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.SubCatagoryController" ("Spice").
+2020-10-21 19:26:59.701 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:26:59.707 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[Id], [s].[CatagoryId], [s].[Name], [c].[Id], [c].[Description], [c].[Name]
+FROM [SubCatagories] AS [s]
+INNER JOIN [Catagories] AS [c] ON [s].[CatagoryId] = [c].[Id]"
+2020-10-21 19:26:59.709 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:26:59.722 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:26:59.726 +05:30 [Information] Executed ViewResult - view "Index" executed in 17.4912ms.
+2020-10-21 19:26:59.727 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)" in 27.8579ms
+2020-10-21 19:26:59.727 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.SubCatagoryController.Index (Spice)"'
+2020-10-21 19:26:59.727 +05:30 [Information] Request finished in 39.8493ms 200 text/html; charset=utf-8
+2020-10-21 19:27:04.124 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/admin/catagory  
+2020-10-21 19:27:04.126 +05:30 [Information] Authorization was successful.
+2020-10-21 19:27:04.127 +05:30 [Information] Executing endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:27:04.127 +05:30 [Information] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Catagory\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Areas.Admin.Controllers.CatagoryController" ("Spice").
+2020-10-21 19:27:04.128 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:27:04.132 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Catagories] AS [c]"
+2020-10-21 19:27:04.133 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:27:04.164 +05:30 [Information] Executed DbCommand ("12"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:27:04.167 +05:30 [Information] Executed ViewResult - view "Index" executed in 34.0778ms.
+2020-10-21 19:27:04.168 +05:30 [Information] Executed action "Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)" in 40.7563ms
+2020-10-21 19:27:04.168 +05:30 [Information] Executed endpoint '"Spice.Areas.Admin.Controllers.CatagoryController.Index (Spice)"'
+2020-10-21 19:27:04.168 +05:30 [Information] Request finished in 43.763ms 200 text/html; charset=utf-8
+2020-10-21 19:27:07.394 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-21 19:27:07.396 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:27:07.401 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-21 19:27:07.413 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-21 19:27:07.421 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-21 19:27:07.425 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-21 19:27:07.428 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ShoppingCarts] AS [s]
+WHERE [s].[AppUserId] = @__userId_0"
+2020-10-21 19:27:07.429 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-21 19:27:07.434 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[City], [a].[Name], [a].[PostalCode], [a].[State], [a].[StreetAddress]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'AppUser') AND ([a].[Id] = @__userId_0)"
+2020-10-21 19:27:07.439 +05:30 [Information] Executed ViewResult - view "Index" executed in 9.7308ms.
+2020-10-21 19:27:07.439 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 37.8237ms
+2020-10-21 19:27:07.439 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-21 19:27:07.440 +05:30 [Information] Request finished in 45.4239ms 200 text/html; charset=utf-8
+2020-10-21 19:27:07.574 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-21 19:27:07.612 +05:30 [Information] Request finished in 37.5963ms 404 

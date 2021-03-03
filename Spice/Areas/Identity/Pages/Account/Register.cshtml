@@ -1,0 +1,112 @@
+﻿@page
+@using Spice.Utility
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group row">
+                <label asp-for="Input.Name" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Input.Name" class="form-control" />
+                    <span class="text-primary" asp-validation-for="Input.Name"></span>
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.Email" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span class="text-primary" asp-validation-for="Input.Email"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.Password" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span class="text-primary" asp-validation-for="Input.Password"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Input.ConfirmPassword" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Input.ConfirmPassword" class="form-control" />
+                    <span class="text-primary" asp-validation-for="Input.ConfirmPassword"></span>
+                </div>
+            </div>
+            @if (User.IsInRole(Spice.Utility.SD.ManagerUser))
+            {
+                <div class="form-group row">
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-5">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rdUserRole" id="rdUserRole1" value="@SD.KitchenUser">
+                            <label class="form-check-label" for="rdUserRole1">Kitchen User</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rdUserRole" id="rdUserRole2" value="@SD.FrontDeskUser">
+                            <label class="form-check-label" for="rdUserRole2">Front-Desk User</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rdUserRole" id="rdUserRole3" value="@SD.ManagerUser">
+                            <label class="form-check-label" for="rdUserRole3">Manager</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="rdUserRole" id="rdUserRole3" value="@SD.Customer">
+                            <label class="form-check-label" for="rdUserRole3">Customer</label>
+                        </div>
+                    </div>
+                    <span class="text-danger" asp-validation-for="Input.ConfirmPassword"></span>
+                </div>
+            }
+
+            <button type="submit" class="btn btn-primary btn-block btn-rounded">Register</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Use another service to register.</h4>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                            for details on setting up this ASP.NET application to support logging in via external services.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                    <i class="fa fa-facebook"></i>
+                                @provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

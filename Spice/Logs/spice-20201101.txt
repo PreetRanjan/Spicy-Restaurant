@@ -1,0 +1,745 @@
+2020-11-01 08:30:03.449 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 08:30:11.004 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 08:30:11.008 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 08:30:11.010 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 08:30:11.175 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 08:30:11.398 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 08:30:11.697 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 08:30:14.401 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 08:30:18.104 +05:30 [Information] Executed DbCommand ("985"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 08:30:18.498 +05:30 [Information] Executed DbCommand ("224"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 08:30:18.672 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 08:30:19.394 +05:30 [Information] Executed ViewResult - view "Index" executed in 829.754ms.
+2020-11-01 08:30:19.396 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 7698.4669ms
+2020-11-01 08:30:19.401 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 08:30:19.446 +05:30 [Information] Request finished in 8279.5634ms 200 text/html; charset=utf-8
+2020-11-01 08:30:19.716 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 08:30:19.729 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/css/standard.min.css  
+2020-11-01 08:30:19.729 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/designs/spiceLogoonly.png  
+2020-11-01 08:30:19.730 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/First.jpg  
+2020-11-01 08:30:19.730 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/7bd1dffd-07a8-4cf4-b480-bac27f552dfb..jpg  
+2020-11-01 08:30:19.770 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/Untitled-1.jpg  
+2020-11-01 08:30:19.770 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/js/standard.min.js  
+2020-11-01 08:30:19.778 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/c14b3202-515d-48cb-9cb2-f0c3a86e2c57..jpg  
+2020-11-01 08:30:19.780 +05:30 [Information] The file "/images/designs/spiceLogoonly.png" was not modified
+2020-11-01 08:30:19.780 +05:30 [Information] The file "/js/standard.min.js" was not modified
+2020-11-01 08:30:19.780 +05:30 [Information] The file "/images/7bd1dffd-07a8-4cf4-b480-bac27f552dfb..jpg" was not modified
+2020-11-01 08:30:19.781 +05:30 [Information] The file "/images/coupons/First.jpg" was not modified
+2020-11-01 08:30:19.782 +05:30 [Information] The file "/images/c14b3202-515d-48cb-9cb2-f0c3a86e2c57..jpg" was not modified
+2020-11-01 08:30:19.782 +05:30 [Information] The file "/images/coupons/Untitled-1.jpg" was not modified
+2020-11-01 08:30:19.782 +05:30 [Information] The file "/css/standard.min.css" was not modified
+2020-11-01 08:30:19.782 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/50off.jpg  
+2020-11-01 08:30:19.787 +05:30 [Information] The file "/images/coupons/50off.jpg" was not modified
+2020-11-01 08:30:19.793 +05:30 [Information] Request finished in 23.7108ms 304 application/javascript
+2020-11-01 08:30:19.794 +05:30 [Information] Request finished in 64.4588ms 304 image/png
+2020-11-01 08:30:19.794 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/noPoster.png  
+2020-11-01 08:30:19.794 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/99024912-6ac8-4943-b686-386a4b30394d..jpg  
+2020-11-01 08:30:19.794 +05:30 [Information] The file "/images/noPoster.png" was not modified
+2020-11-01 08:30:19.793 +05:30 [Information] Request finished in 63.0621ms 304 image/jpeg
+2020-11-01 08:30:19.794 +05:30 [Information] Request finished in 0.4509ms 304 image/png
+2020-11-01 08:30:19.794 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/18c17ad4-b0be-4e28-bbac-0a9a2052889f..jpg  
+2020-11-01 08:30:19.794 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/510c8c25-8dd1-4add-a332-b606a20ca8b0..jpg  
+2020-11-01 08:30:19.794 +05:30 [Information] Request finished in 64.4382ms 304 image/jpeg
+2020-11-01 08:30:19.794 +05:30 [Information] Request finished in 16.3127ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/b3ea993b-27e6-4dda-b520-4935e86c299b..jpg  
+2020-11-01 08:30:19.795 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/2c429788-35c1-4826-b3df-63a5484bed89..jpg  
+2020-11-01 08:30:19.795 +05:30 [Information] The file "/images/b3ea993b-27e6-4dda-b520-4935e86c299b..jpg" was not modified
+2020-11-01 08:30:19.795 +05:30 [Information] The file "/images/2c429788-35c1-4826-b3df-63a5484bed89..jpg" was not modified
+2020-11-01 08:30:19.795 +05:30 [Information] Request finished in 0.2762ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/a3cdf279-2d71-4016-bb3b-3437d80c44be..jpg  
+2020-11-01 08:30:19.795 +05:30 [Information] Request finished in 0.2617ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/531d8496-2ddc-4172-b89c-e698e80019a3..jpg  
+2020-11-01 08:30:19.795 +05:30 [Information] Request finished in 25.497ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] The file "/images/99024912-6ac8-4943-b686-386a4b30394d..jpg" was not modified
+2020-11-01 08:30:19.796 +05:30 [Information] The file "/images/510c8c25-8dd1-4add-a332-b606a20ca8b0..jpg" was not modified
+2020-11-01 08:30:19.796 +05:30 [Information] Request finished in 1.7991ms 304 image/jpeg
+2020-11-01 08:30:19.796 +05:30 [Information] Request finished in 1.4137ms 304 image/jpeg
+2020-11-01 08:30:19.796 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/afe1c2ab-1359-410a-a630-9f1a45458164..jpg  
+2020-11-01 08:30:19.796 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/013719ea-8b20-4269-914a-187bb9206829..jpg  
+2020-11-01 08:30:19.796 +05:30 [Information] The file "/images/afe1c2ab-1359-410a-a630-9f1a45458164..jpg" was not modified
+2020-11-01 08:30:19.796 +05:30 [Information] The file "/images/013719ea-8b20-4269-914a-187bb9206829..jpg" was not modified
+2020-11-01 08:30:19.796 +05:30 [Information] Request finished in 0.2863ms 304 image/jpeg
+2020-11-01 08:30:19.796 +05:30 [Information] Request finished in 0.2597ms 304 image/jpeg
+2020-11-01 08:30:19.796 +05:30 [Information] Request finished in 14.4208ms 304 image/jpeg
+2020-11-01 08:30:19.797 +05:30 [Information] The file "/images/a3cdf279-2d71-4016-bb3b-3437d80c44be..jpg" was not modified
+2020-11-01 08:30:19.797 +05:30 [Information] Request finished in 1.9034ms 304 image/jpeg
+2020-11-01 08:30:19.797 +05:30 [Information] The file "/images/531d8496-2ddc-4172-b89c-e698e80019a3..jpg" was not modified
+2020-11-01 08:30:19.797 +05:30 [Information] Request finished in 1.9853ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] Request finished in 66.5563ms 304 text/css
+2020-11-01 08:30:19.796 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/7478dd3c-542b-4292-8504-b844170d80a4..jpg  
+2020-11-01 08:30:19.797 +05:30 [Information] The file "/images/7478dd3c-542b-4292-8504-b844170d80a4..jpg" was not modified
+2020-11-01 08:30:19.797 +05:30 [Information] Request finished in 1.726ms 304 image/jpeg
+2020-11-01 08:30:19.795 +05:30 [Information] The file "/images/18c17ad4-b0be-4e28-bbac-0a9a2052889f..jpg" was not modified
+2020-11-01 08:30:19.798 +05:30 [Information] Request finished in 3.4153ms 304 image/jpeg
+2020-11-01 08:30:19.805 +05:30 [Information] Request finished in 89.141ms 404 
+2020-11-01 08:30:20.481 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 08:30:20.505 +05:30 [Information] Request finished in 24.1988ms 404 
+2020-11-01 08:30:20.575 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:30:20.576 +05:30 [Information] The file "/favicon.ico" was not modified
+2020-11-01 08:30:20.576 +05:30 [Information] Request finished in 0.8794ms 304 image/x-icon
+2020-11-01 08:30:34.374 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/samosa  
+2020-11-01 08:30:34.376 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 08:30:34.439 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 08:30:34.549 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 08:30:34.890 +05:30 [Information] Executed DbCommand ("298"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 08:30:35.072 +05:30 [Information] Executed DbCommand ("21"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 08:30:35.248 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-11-01 08:30:35.460 +05:30 [Information] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-11-01 08:30:35.532 +05:30 [Information] Executed ViewResult - view "Details" executed in 286.6406ms.
+2020-11-01 08:30:35.535 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 1095.6373ms
+2020-11-01 08:30:35.535 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 08:30:35.535 +05:30 [Information] Request finished in 1161.0041ms 200 text/html; charset=utf-8
+2020-11-01 08:30:35.645 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.js  
+2020-11-01 08:30:35.646 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.css  
+2020-11-01 08:30:35.663 +05:30 [Information] The file "/lib/snackbar/snackbar.min.js" was not modified
+2020-11-01 08:30:35.663 +05:30 [Information] Request finished in 17.5738ms 304 application/javascript
+2020-11-01 08:30:35.663 +05:30 [Information] The file "/lib/snackbar/snackbar.min.css" was not modified
+2020-11-01 08:30:35.663 +05:30 [Information] Request finished in 17.5564ms 304 text/css
+2020-11-01 08:31:17.915 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:31:18.061 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:31:18.113 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:31:18.158 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:31:18.184 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:31:18.191 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:31:18.192 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:31:18.331 +05:30 [Information] Executed page "/Account/Register" in 217.7694ms
+2020-11-01 08:31:18.331 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:31:18.331 +05:30 [Information] Request finished in 415.8166ms 200 text/html; charset=utf-8
+2020-11-01 08:31:18.394 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/Identity/lib/jquery-validation/dist/jquery.validate.js  
+2020-11-01 08:31:18.396 +05:30 [Information] The file "/Identity/lib/jquery-validation/dist/jquery.validate.js" was not modified
+2020-11-01 08:31:18.412 +05:30 [Information] Request finished in 1.7878ms 304 application/javascript
+2020-11-01 08:31:18.412 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2020-11-01 08:31:18.412 +05:30 [Information] The file "/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" was not modified
+2020-11-01 08:31:18.413 +05:30 [Information] Request finished in 0.6633ms 304 application/javascript
+2020-11-01 08:33:29.257 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:33:51.997 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:33:52.006 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:33:52.008 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:33:52.009 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:33:52.009 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:33:52.010 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:33:52.052 +05:30 [Information] Executed page "/Account/Register" in 45.8236ms
+2020-11-01 08:33:52.052 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:33:52.052 +05:30 [Information] Request finished in 22795.4012ms 200 text/html; charset=utf-8
+2020-11-01 08:33:52.200 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:33:52.284 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:33:52.284 +05:30 [Information] Request finished in 84.1647ms 200 image/x-icon
+2020-11-01 08:34:29.858 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:34:30.427 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:34:30.435 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:34:30.437 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:34:30.437 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:34:30.437 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:34:30.437 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:34:30.484 +05:30 [Information] Executed page "/Account/Register" in 48.2639ms
+2020-11-01 08:34:30.484 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:34:30.484 +05:30 [Information] Request finished in 625.7202ms 200 text/html; charset=utf-8
+2020-11-01 08:34:30.665 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:34:30.668 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:34:30.668 +05:30 [Information] Request finished in 2.875ms 200 image/x-icon
+2020-11-01 08:36:49.677 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:36:50.270 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:36:50.286 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:36:50.289 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:36:50.289 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:36:50.289 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:36:50.289 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:36:50.339 +05:30 [Information] Executed page "/Account/Register" in 51.7954ms
+2020-11-01 08:36:50.339 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:36:50.339 +05:30 [Information] Request finished in 662.6824ms 200 text/html; charset=utf-8
+2020-11-01 08:36:50.941 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:36:50.998 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:36:50.998 +05:30 [Information] Request finished in 56.6488ms 200 image/x-icon
+2020-11-01 08:39:49.860 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:39:51.356 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:39:51.364 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:39:51.367 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:39:51.367 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:39:51.368 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:39:51.368 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:39:51.422 +05:30 [Information] Executed page "/Account/Register" in 57.7222ms
+2020-11-01 08:39:51.422 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:39:51.422 +05:30 [Information] Request finished in 1562.7975ms 200 text/html; charset=utf-8
+2020-11-01 08:39:51.901 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:39:51.931 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:39:51.931 +05:30 [Information] Request finished in 30.0172ms 200 image/x-icon
+2020-11-01 08:40:21.509 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:40:22.322 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:40:22.332 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:40:22.333 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:40:22.334 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:40:22.334 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:40:22.334 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:40:22.380 +05:30 [Information] Executed page "/Account/Register" in 48.2136ms
+2020-11-01 08:40:22.380 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:40:22.381 +05:30 [Information] Request finished in 872.0098ms 200 text/html; charset=utf-8
+2020-11-01 08:40:22.619 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:40:22.622 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:40:22.622 +05:30 [Information] Request finished in 21.5932ms 200 image/x-icon
+2020-11-01 08:40:36.966 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:40:37.438 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:40:37.458 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:40:37.459 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:40:37.459 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:40:37.459 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:40:37.459 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:40:37.536 +05:30 [Information] Executed page "/Account/Register" in 78.0551ms
+2020-11-01 08:40:37.536 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:40:37.537 +05:30 [Information] Request finished in 570.9052ms 200 text/html; charset=utf-8
+2020-11-01 08:40:37.890 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:40:37.935 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:40:37.935 +05:30 [Information] Request finished in 44.7626ms 200 image/x-icon
+2020-11-01 08:42:17.302 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:42:17.859 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:42:17.873 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:42:17.875 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:42:17.875 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:42:17.875 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:42:17.875 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:42:17.973 +05:30 [Information] Executed page "/Account/Register" in 99.7399ms
+2020-11-01 08:42:17.973 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:42:17.973 +05:30 [Information] Request finished in 670.9308ms 200 text/html; charset=utf-8
+2020-11-01 08:42:18.221 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:42:18.223 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:42:18.227 +05:30 [Information] Request finished in 5.7613ms 200 image/x-icon
+2020-11-01 08:45:44.784 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:45:45.147 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:45:45.154 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:45:45.155 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:45:45.156 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:45:45.156 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:45:45.156 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:45:45.199 +05:30 [Information] Executed page "/Account/Register" in 44.7063ms
+2020-11-01 08:45:45.199 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:45:45.199 +05:30 [Information] Request finished in 415.311ms 200 text/html; charset=utf-8
+2020-11-01 08:45:45.368 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:45:45.370 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:45:45.370 +05:30 [Information] Request finished in 2.3324ms 200 image/x-icon
+2020-11-01 08:46:35.189 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:46:35.511 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:46:35.518 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:46:35.520 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:46:35.520 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:46:35.520 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:46:35.520 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:46:35.571 +05:30 [Information] Executed page "/Account/Register" in 52.1598ms
+2020-11-01 08:46:35.571 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:46:35.571 +05:30 [Information] Request finished in 382.0656ms 200 text/html; charset=utf-8
+2020-11-01 08:46:35.732 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:46:35.738 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:46:35.738 +05:30 [Information] Request finished in 6.4074ms 200 image/x-icon
+2020-11-01 08:47:10.140 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:47:10.513 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:47:10.522 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:47:10.524 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:47:10.524 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:47:10.524 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:47:10.524 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:47:10.561 +05:30 [Information] Executed page "/Account/Register" in 38.0056ms
+2020-11-01 08:47:10.561 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:47:10.561 +05:30 [Information] Request finished in 420.5918ms 200 text/html; charset=utf-8
+2020-11-01 08:47:10.712 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:47:10.714 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:47:10.715 +05:30 [Information] Request finished in 2.9668ms 200 image/x-icon
+2020-11-01 08:47:14.384 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:47:14.397 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:47:14.398 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:47:14.399 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:47:14.399 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:47:14.399 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:47:14.399 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:47:14.404 +05:30 [Information] Executed page "/Account/Register" in 5.8921ms
+2020-11-01 08:47:14.404 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:47:14.404 +05:30 [Information] Request finished in 20.3398ms 200 text/html; charset=utf-8
+2020-11-01 08:47:14.501 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:47:14.504 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:47:14.505 +05:30 [Information] Request finished in 3.7845ms 200 image/x-icon
+2020-11-01 08:47:30.920 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:47:31.243 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:47:31.254 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:47:31.255 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:47:31.255 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:47:31.255 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:47:31.255 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:47:31.298 +05:30 [Information] Executed page "/Account/Register" in 44.6453ms
+2020-11-01 08:47:31.299 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:47:31.299 +05:30 [Information] Request finished in 378.8149ms 200 text/html; charset=utf-8
+2020-11-01 08:47:31.421 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:47:31.437 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:47:31.437 +05:30 [Information] Request finished in 16.8615ms 200 image/x-icon
+2020-11-01 08:48:06.549 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:48:06.892 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:48:06.898 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:48:06.900 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:48:06.900 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:48:06.900 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:48:06.900 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:48:06.941 +05:30 [Information] Executed page "/Account/Register" in 42.1791ms
+2020-11-01 08:48:06.941 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:48:06.941 +05:30 [Information] Request finished in 391.9643ms 200 text/html; charset=utf-8
+2020-11-01 08:48:07.097 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:48:07.099 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:48:07.099 +05:30 [Information] Request finished in 1.8526ms 200 image/x-icon
+2020-11-01 08:48:12.748 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:48:12.764 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:48:12.768 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:48:12.769 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:48:12.769 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:48:12.769 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:48:12.769 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:48:12.781 +05:30 [Information] Executed page "/Account/Register" in 13.5091ms
+2020-11-01 08:48:12.781 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:48:12.782 +05:30 [Information] Request finished in 33.4215ms 200 text/html; charset=utf-8
+2020-11-01 08:48:14.013 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-11-01 08:48:14.093 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 08:48:14.103 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 08:48:14.106 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:48:14.152 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 08:48:14.152 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:48:14.152 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:48:14.152 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:48:14.229 +05:30 [Information] Executed page "/Account/Login" in 126.2908ms
+2020-11-01 08:48:14.229 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 08:48:14.229 +05:30 [Information] Request finished in 216.6766ms 200 text/html; charset=utf-8
+2020-11-01 08:48:14.281 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/designs/spiceLogo.png  
+2020-11-01 08:48:14.282 +05:30 [Information] The file "/images/designs/spiceLogo.png" was not modified
+2020-11-01 08:48:14.282 +05:30 [Information] Request finished in 0.6234ms 304 image/png
+2020-11-01 08:48:59.512 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-11-01 08:48:59.859 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 08:48:59.864 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 08:48:59.866 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:48:59.867 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 08:48:59.867 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:48:59.867 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:48:59.867 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:48:59.889 +05:30 [Information] Executed page "/Account/Login" in 24.635ms
+2020-11-01 08:48:59.891 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 08:48:59.891 +05:30 [Information] Request finished in 379.8628ms 200 text/html; charset=utf-8
+2020-11-01 08:49:00.079 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:49:00.085 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:49:00.085 +05:30 [Information] Request finished in 6.6126ms 200 image/x-icon
+2020-11-01 08:49:26.041 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:49:26.059 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:49:26.067 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:49:26.068 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:49:26.068 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:49:26.068 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:49:26.068 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:49:26.072 +05:30 [Information] Executed page "/Account/Register" in 4.9835ms
+2020-11-01 08:49:26.072 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:49:26.072 +05:30 [Information] Request finished in 30.7402ms 200 text/html; charset=utf-8
+2020-11-01 08:49:53.925 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:49:54.234 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:49:54.240 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:49:54.241 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:49:54.241 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:49:54.242 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:49:54.242 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:49:54.277 +05:30 [Information] Executed page "/Account/Register" in 36.961ms
+2020-11-01 08:49:54.278 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:49:54.278 +05:30 [Information] Request finished in 352.2686ms 200 text/html; charset=utf-8
+2020-11-01 08:49:54.416 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:49:54.418 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:49:54.418 +05:30 [Information] Request finished in 2.1485ms 200 image/x-icon
+2020-11-01 08:50:41.565 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/customer/home/privacy  
+2020-11-01 08:50:41.569 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Privacy (Spice)"'
+2020-11-01 08:50:41.573 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Privacy\", controller = \"Home\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Privacy()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 08:50:41.599 +05:30 [Information] Executing ViewResult, running view "Privacy".
+2020-11-01 08:50:41.623 +05:30 [Information] Executed ViewResult - view "Privacy" executed in 32.8369ms.
+2020-11-01 08:50:41.623 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Privacy (Spice)" in 50.4668ms
+2020-11-01 08:50:41.623 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Privacy (Spice)"'
+2020-11-01 08:50:41.628 +05:30 [Information] Request finished in 59.4531ms 200 text/html; charset=utf-8
+2020-11-01 08:50:43.268 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:50:43.276 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:50:43.276 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:50:43.277 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:50:43.277 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:50:43.277 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:50:43.277 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:50:43.282 +05:30 [Information] Executed page "/Account/Register" in 5.6318ms
+2020-11-01 08:50:43.282 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:50:43.282 +05:30 [Information] Request finished in 13.6788ms 200 text/html; charset=utf-8
+2020-11-01 08:53:56.234 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:53:56.548 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:53:56.556 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:53:56.557 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:53:56.557 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:53:56.557 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:53:56.558 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:53:56.597 +05:30 [Information] Executed page "/Account/Register" in 40.4984ms
+2020-11-01 08:53:56.597 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:53:56.597 +05:30 [Information] Request finished in 362.7713ms 200 text/html; charset=utf-8
+2020-11-01 08:53:56.837 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:53:56.839 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:53:56.839 +05:30 [Information] Request finished in 2.4337ms 200 image/x-icon
+2020-11-01 08:54:05.200 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:54:05.211 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:54:05.212 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:54:05.212 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:54:05.213 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:54:05.213 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:54:05.213 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:54:05.216 +05:30 [Information] Executed page "/Account/Register" in 4.0728ms
+2020-11-01 08:54:05.216 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:54:05.216 +05:30 [Information] Request finished in 16.2457ms 200 text/html; charset=utf-8
+2020-11-01 08:54:05.339 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:54:05.341 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:54:05.342 +05:30 [Information] Request finished in 2.2141ms 200 image/x-icon
+2020-11-01 08:54:05.836 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:54:05.838 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:54:05.838 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:54:05.839 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:54:05.839 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:54:05.839 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:54:05.839 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:54:05.843 +05:30 [Information] Executed page "/Account/Register" in 5.5261ms
+2020-11-01 08:54:05.844 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:54:05.844 +05:30 [Information] Request finished in 7.9888ms 200 text/html; charset=utf-8
+2020-11-01 08:54:05.989 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:54:06.012 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:54:06.012 +05:30 [Information] Request finished in 22.9069ms 200 image/x-icon
+2020-11-01 08:54:06.015 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:54:06.016 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:54:06.016 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:54:06.017 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:54:06.017 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:54:06.017 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:54:06.017 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:54:06.021 +05:30 [Information] Executed page "/Account/Register" in 4.9684ms
+2020-11-01 08:54:06.021 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:54:06.022 +05:30 [Information] Request finished in 6.2385ms 200 text/html; charset=utf-8
+2020-11-01 08:54:06.165 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:54:06.166 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:54:06.167 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:54:06.168 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:54:06.168 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:54:06.168 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:54:06.168 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:54:06.170 +05:30 [Information] Executed page "/Account/Register" in 3.3665ms
+2020-11-01 08:54:06.170 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:54:06.170 +05:30 [Information] Request finished in 5.0644ms 200 text/html; charset=utf-8
+2020-11-01 08:54:06.284 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-11-01 08:54:06.302 +05:30 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\Developer\CODE\NETCore\Spice\Spice\wwwroot\favicon.ico"'
+2020-11-01 08:54:06.302 +05:30 [Information] Request finished in 18.3218ms 200 image/x-icon
+2020-11-01 08:54:50.158 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 08:54:51.933 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 08:54:51.939 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 08:54:51.941 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 08:54:52.000 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 08:54:52.164 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 08:54:52.282 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 08:54:54.308 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 08:54:55.475 +05:30 [Information] Executed DbCommand ("68"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 08:54:55.616 +05:30 [Information] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 08:54:55.763 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 08:54:56.111 +05:30 [Information] Executed ViewResult - view "Index" executed in 458.9241ms.
+2020-11-01 08:54:56.113 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 3830.4602ms
+2020-11-01 08:54:56.116 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 08:54:56.141 +05:30 [Information] Request finished in 4149.0309ms 200 text/html; charset=utf-8
+2020-11-01 08:54:56.245 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 08:54:56.298 +05:30 [Information] Request finished in 52.7601ms 404 
+2020-11-01 08:54:56.753 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 08:54:56.765 +05:30 [Information] Request finished in 12.2753ms 404 
+2020-11-01 08:55:10.801 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-11-01 08:55:10.823 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 08:55:10.875 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 08:55:10.918 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:55:10.934 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 08:55:10.938 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:55:10.944 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:55:10.945 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:55:11.040 +05:30 [Information] Executed page "/Account/Login" in 164.488ms
+2020-11-01 08:55:11.040 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 08:55:11.040 +05:30 [Information] Request finished in 239.401ms 200 text/html; charset=utf-8
+2020-11-01 08:55:14.146 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/register  
+2020-11-01 08:55:14.170 +05:30 [Information] Executing endpoint '"/Account/Register"'
+2020-11-01 08:55:14.180 +05:30 [Information] Route matched with "{page = \"/Account/Register\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Register"
+2020-11-01 08:55:14.201 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync" - ModelState is Valid
+2020-11-01 08:55:14.221 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 08:55:14.222 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 08:55:14.222 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 08:55:14.272 +05:30 [Information] Executed page "/Account/Register" in 91.4282ms
+2020-11-01 08:55:14.272 +05:30 [Information] Executed endpoint '"/Account/Register"'
+2020-11-01 08:55:14.272 +05:30 [Information] Request finished in 126.2773ms 200 text/html; charset=utf-8
+2020-11-01 09:17:45.016 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/customer/cart  
+2020-11-01 09:17:45.470 +05:30 [Information] Authorization failed.
+2020-11-01 09:17:45.510 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-11-01 09:17:45.578 +05:30 [Information] Request finished in 620.9515ms 302 
+2020-11-01 09:17:45.778 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/Identity/Account/Login?ReturnUrl=%2Fcustomer%2Fcart  
+2020-11-01 09:17:45.909 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 09:17:45.978 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 09:17:46.138 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 09:17:46.167 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 09:17:46.168 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 09:17:46.168 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 09:17:46.169 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 09:17:46.567 +05:30 [Information] Executed page "/Account/Login" in 588.3149ms
+2020-11-01 09:17:46.567 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 09:17:46.567 +05:30 [Information] Request finished in 789.3538ms 200 text/html; charset=utf-8
+2020-11-01 09:18:06.341 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-11-01 09:18:06.342 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 09:18:06.435 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 09:18:06.496 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 09:18:06.498 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 09:18:06.500 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 09:18:06.500 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 09:18:06.501 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 09:18:06.545 +05:30 [Information] Executed page "/Account/Login" in 109.6269ms
+2020-11-01 09:18:06.545 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 09:18:06.546 +05:30 [Information] Request finished in 205.4453ms 200 text/html; charset=utf-8
+2020-11-01 09:33:40.974 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 09:33:44.014 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 09:33:44.018 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 09:33:44.020 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 09:33:44.225 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 09:33:44.560 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:33:44.896 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:33:47.288 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:33:49.455 +05:30 [Information] Executed DbCommand ("420"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 09:33:49.775 +05:30 [Information] Executed DbCommand ("189"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 09:33:50.015 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 09:33:50.713 +05:30 [Information] Executed ViewResult - view "Index" executed in 836.574ms.
+2020-11-01 09:33:50.719 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 5822.0927ms
+2020-11-01 09:33:50.725 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:33:50.766 +05:30 [Information] Request finished in 6548.7279ms 200 text/html; charset=utf-8
+2020-11-01 09:33:51.165 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 09:33:51.326 +05:30 [Information] Request finished in 161.4731ms 404 
+2020-11-01 09:39:50.589 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/paneer-fried-rice  
+2020-11-01 09:39:50.611 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:39:50.655 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:39:50.778 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:39:51.126 +05:30 [Information] Executed DbCommand ("271"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:39:51.292 +05:30 [Information] Executed DbCommand ("13"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:39:51.576 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-11-01 09:39:51.789 +05:30 [Information] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-11-01 09:39:51.840 +05:30 [Information] Executed ViewResult - view "Details" executed in 276.6611ms.
+2020-11-01 09:39:51.847 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 1192.5997ms
+2020-11-01 09:39:51.848 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:39:51.850 +05:30 [Information] Request finished in 1263.3409ms 200 text/html; charset=utf-8
+2020-11-01 09:39:54.915 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 21
+2020-11-01 09:39:54.934 +05:30 [Information] Authorization failed.
+2020-11-01 09:39:54.940 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-11-01 09:39:54.941 +05:30 [Information] Request finished in 32.1719ms 401 
+2020-11-01 09:40:02.164 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.js.map  
+2020-11-01 09:40:02.216 +05:30 [Information] The file "/lib/snackbar/snackbar.min.js.map" was not modified
+2020-11-01 09:40:02.230 +05:30 [Information] Request finished in 66.2011ms 304 text/plain
+2020-11-01 09:40:05.105 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 21
+2020-11-01 09:40:05.109 +05:30 [Information] Authorization failed.
+2020-11-01 09:40:05.110 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-11-01 09:40:05.114 +05:30 [Information] Request finished in 9.5013ms 401 
+2020-11-01 09:40:10.625 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 21
+2020-11-01 09:40:10.628 +05:30 [Information] Authorization failed.
+2020-11-01 09:40:10.628 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-11-01 09:40:10.630 +05:30 [Information] Request finished in 5.6786ms 401 
+2020-11-01 09:43:58.827 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/vada-pav  
+2020-11-01 09:43:58.828 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:43:58.829 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:43:58.871 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:43:58.960 +05:30 [Information] Executed DbCommand ("16"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:43:58.975 +05:30 [Information] Executed DbCommand ("14"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:43:58.979 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-11-01 09:43:59.021 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-11-01 09:43:59.046 +05:30 [Information] Executed ViewResult - view "Details" executed in 66.6173ms.
+2020-11-01 09:43:59.046 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 216.3958ms
+2020-11-01 09:43:59.046 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:43:59.046 +05:30 [Information] Request finished in 219.8289ms 200 text/html; charset=utf-8
+2020-11-01 09:44:03.820 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 21
+2020-11-01 09:44:03.822 +05:30 [Information] Authorization failed.
+2020-11-01 09:44:03.825 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-11-01 09:44:03.826 +05:30 [Information] Request finished in 6.2496ms 401 
+2020-11-01 09:44:07.470 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/identity/account/login  
+2020-11-01 09:44:07.514 +05:30 [Information] Executing endpoint '"/Account/Login"'
+2020-11-01 09:44:07.587 +05:30 [Information] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login"
+2020-11-01 09:44:07.608 +05:30 [Information] Executing handler method "Spice.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid
+2020-11-01 09:44:07.643 +05:30 [Information] AuthenticationScheme: "Identity.External" signed out.
+2020-11-01 09:44:07.648 +05:30 [Information] Executed handler method "OnGetAsync", returned result "".
+2020-11-01 09:44:07.654 +05:30 [Information] Executing an implicit handler method - ModelState is Valid
+2020-11-01 09:44:07.654 +05:30 [Information] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult".
+2020-11-01 09:44:07.780 +05:30 [Information] Executed page "/Account/Login" in 192.6014ms
+2020-11-01 09:44:07.780 +05:30 [Information] Executed endpoint '"/Account/Login"'
+2020-11-01 09:44:07.781 +05:30 [Information] Request finished in 310.4709ms 200 text/html; charset=utf-8
+2020-11-01 09:45:32.489 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 09:45:34.845 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 09:45:34.848 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 09:45:34.855 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 09:45:34.890 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 09:45:35.024 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:45:35.121 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:45:36.962 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:45:37.990 +05:30 [Information] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 09:45:38.128 +05:30 [Information] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 09:45:38.184 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 09:45:38.441 +05:30 [Information] Executed ViewResult - view "Index" executed in 279.6241ms.
+2020-11-01 09:45:38.443 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 3321.4602ms
+2020-11-01 09:45:38.449 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:45:38.548 +05:30 [Information] Request finished in 3665.1381ms 200 text/html; charset=utf-8
+2020-11-01 09:45:38.585 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 09:45:38.601 +05:30 [Information] Request finished in 15.9882ms 404 
+2020-11-01 09:47:41.730 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/mashroom-masala  
+2020-11-01 09:47:41.742 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:47:41.765 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:47:41.880 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:47:41.975 +05:30 [Information] Executed DbCommand ("59"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:47:42.047 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-11-01 09:47:42.204 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-11-01 09:47:42.334 +05:30 [Information] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-11-01 09:47:42.372 +05:30 [Information] Executed ViewResult - view "Details" executed in 172.0187ms.
+2020-11-01 09:47:42.383 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 618.4881ms
+2020-11-01 09:47:42.383 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-11-01 09:47:42.384 +05:30 [Information] Request finished in 660.2471ms 200 text/html; charset=utf-8
+2020-11-01 09:47:43.859 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 09:47:43.861 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:47:43.862 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:47:43.905 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:47:43.918 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 09:47:43.923 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 09:47:43.924 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 09:47:43.943 +05:30 [Information] Executed ViewResult - view "Index" executed in 19.2512ms.
+2020-11-01 09:47:43.943 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 81.3803ms
+2020-11-01 09:47:43.943 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:47:43.944 +05:30 [Information] Request finished in 89.6111ms 200 text/html; charset=utf-8
+2020-11-01 09:47:43.992 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 09:47:43.995 +05:30 [Information] Request finished in 2.8762ms 404 
+2020-11-01 09:48:09.342 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 09:48:10.972 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 09:48:10.977 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 09:48:10.981 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 09:48:11.022 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 09:48:11.160 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:48:11.265 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 09:48:13.048 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 09:48:14.088 +05:30 [Information] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 09:48:14.207 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 09:48:14.261 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 09:48:14.522 +05:30 [Information] Executed ViewResult - view "Index" executed in 283.4664ms.
+2020-11-01 09:48:14.526 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 3259.8149ms
+2020-11-01 09:48:14.530 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 09:48:14.583 +05:30 [Information] Request finished in 3572.0458ms 200 text/html; charset=utf-8
+2020-11-01 09:48:14.703 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 09:48:14.794 +05:30 [Information] Request finished in 90.478ms 404 
+2020-11-01 10:03:06.856 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-01 10:03:10.200 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-11-01 10:03:10.210 +05:30 [Information] Hosting environment: "Development"
+2020-11-01 10:03:10.215 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-11-01 10:03:10.258 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-11-01 10:03:10.433 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 10:03:10.570 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-11-01 10:03:12.822 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-11-01 10:03:16.904 +05:30 [Information] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-11-01 10:03:17.252 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-11-01 10:03:18.051 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-11-01 10:03:19.553 +05:30 [Information] Executed ViewResult - view "Index" executed in 2264.4657ms.
+2020-11-01 10:03:19.556 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 8985.0625ms
+2020-11-01 10:03:19.559 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-11-01 10:03:19.632 +05:30 [Information] Request finished in 9378.1944ms 200 text/html; charset=utf-8
+2020-11-01 10:03:19.690 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-11-01 10:03:19.703 +05:30 [Information] Request finished in 13.4315ms 404 

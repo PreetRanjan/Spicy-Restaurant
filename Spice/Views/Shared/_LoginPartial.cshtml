@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item hvr-underline-from-center">
+            <a class="nav-link text-center active" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@await Component.InvokeAsync("UserName")</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-area="Customer" asp-controller="Settings" asp-action="Index">Your Account</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </li>
+        <li class="nav-item text-center active text-center">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-power" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z" />
+                        <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" />
+                    </svg>
+                    Logout
+                </button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item hvr-underline-from-center">
+            <a class="nav-link active text-center" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item hvr-underline-from-center">
+            <a class="nav-link active text-center" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

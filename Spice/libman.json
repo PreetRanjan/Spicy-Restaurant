@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootbox.js@5.4.0",
+      "destination": "wwwroot/lib/bootbox"
+    },
+    {
+      "library": "datatable@2.0.1",
+      "destination": "wwwroot/lib/jquery-datatable"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/jquery-ui"
+    },
+    {
+      "library": "jquery-timepicker@1.10.0",
+      "destination": "wwwroot/lib/jquery-timepicker"
+    },
+    {
+      "library": "hover.css@2.3.1",
+      "destination": "wwwroot/lib/hover-css"
+    },
+    {
+      "library": "node-snackbar@0.1.16",
+      "destination": "wwwroot/lib/snackbar"
+    },
+    {
+      "library": "sweetalert@2.1.2",
+      "destination": "wwwroot/lib/swtalert"
+    }
+  ]
+}

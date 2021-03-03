@@ -1,0 +1,164 @@
+﻿@model Spice.Models.ShoppingCart
+@using Spice.Extensions
+@{
+    ViewData["Title"] = Model.MenuItem.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/lib/snackbar/snackbar.min.css" rel="stylesheet" />
+<ol class="breadcrumb bg-white text-success">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item">@Model.MenuItem.Catagory.Name</li>
+    <li class="breadcrumb-item">@Model.MenuItem.SubCatagory.Name</li>
+    <li class="breadcrumb-item">@Model.MenuItem.Name</li>
+</ol>
+<form method="post">
+    @Html.HiddenFor(c => c.MenuItemId)
+    @Html.HiddenFor(c => c.AppUserId)
+    <div class="border background-white nuemorph-card">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@Model.MenuItem.Image" class="d-block mx-auto" />
+            </div>
+            <div class="col-md-8">
+                <div class="p-3">
+                    <h4>@Model.MenuItem.Name</h4>
+                    <h5>
+                        @Model.MenuItem.Catagory.Name
+                        (@Model.MenuItem.Spicyness)
+                    </h5>
+                    <span class="badge badge-success p-2">@Model.MenuItem.SubCatagory.Name</span>
+                    <hr />
+                    <h3>Price : ₹ @Model.MenuItem.Price</h3>
+                    <div class="row ml-1 text-sm-center offset-2">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                                </svg>
+                            </button>
+                            <input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="10">
+
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-block btn-outline-success">Back to List</a>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" id="AddtoCart" class="btn btn-success btn-block text-white">Add to Cart</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="result">
+                        
+                    </div>
+                    <br />
+                    <ul class="nav nav-tabs bg-transparent">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#profile">Description</a>
+                        </li>
+
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+
+                        <div class="tab-pane fade active show" id="profile">
+                            <p>
+                                @Html.Raw(Model.MenuItem.Description)
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</form>
+<div class="card-footer">
+    @await Component.InvokeAsync("Featured")
+</div>
+@section Scripts
+{
+    <script src="~/lib/snackbar/snackbar.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        var base = "@Url.Content("~/")";
+        var quantitiy = 0;
+        $('.quantity-right-plus').click(function (e) {
+
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+            $('#quantity').val(quantity + 1);
+
+
+            // Increment
+
+        });
+
+        $('.quantity-left-minus').click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+            // Increment
+            if (quantity > 0) {
+                $('#quantity').val(quantity - 1);
+            }
+        });
+        
+
+        $('#AddtoCart').click(function () {
+            var obj = {
+                MenuItemId: $("#MenuItemId").val(),
+                Count: $("#quantity").val()
+            };
+            $.post(base + "Customer/Home/AddtoCart", obj)
+                .done(
+                    function (data) {
+                        $("#result").html(
+                            `<div class="card text-white bg-gradient-primary mb-3 rounded border-light">
+                            <div class="card-body">
+                                <h4 class="card-title">${data.count} Items Added to Cart!!</h4>
+                                <a href="/Customer/Cart/Index" class="btn btn-secondary float-right btn-block col-6">Go to Cart</a>
+                            </div>
+                        </div>
+                             `
+                        );
+                        Snackbar.show({
+                            text: 'Item Added to Cart',
+                            pos: 'bottom-center'
+
+                        });
+
+                    }
+            ).fail(function () {
+                Snackbar.show({
+                    text: "Error: Couldn't add to cart",
+                    pos: 'bottom-center',
+                    actionTextColor: '#f10a0a'
+
+                });
+            });
+        });
+
+    });
+    </script>
+}

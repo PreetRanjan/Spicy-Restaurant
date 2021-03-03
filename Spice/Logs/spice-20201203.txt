@@ -1,0 +1,40 @@
+2020-12-03 09:29:57.481 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-03 09:30:04.724 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-12-03 09:30:04.753 +05:30 [Information] Hosting environment: "Development"
+2020-12-03 09:30:04.759 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-12-03 09:30:04.997 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-12-03 09:30:05.912 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Boolean Microsoft.EntityFrameworkCore.Migrations.IMigrationsModelDiffer.HasDifferences(Microsoft.EntityFrameworkCore.Metadata.IModel, Microsoft.EntityFrameworkCore.Metadata.IModel)'.
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-03 09:30:06.071 +05:30 [Information] Request finished in 1080.2963ms 500 text/html; charset=utf-8
+2020-12-03 09:30:06.742 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-12-03 09:30:06.752 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Boolean Microsoft.EntityFrameworkCore.Migrations.IMigrationsModelDiffer.HasDifferences(Microsoft.EntityFrameworkCore.Metadata.IModel, Microsoft.EntityFrameworkCore.Metadata.IModel)'.
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-03 09:30:06.765 +05:30 [Information] Request finished in 22.9184ms 500 text/plain
+2020-12-03 09:38:33.745 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-03 09:38:37.048 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-12-03 09:38:37.052 +05:30 [Information] Hosting environment: "Development"
+2020-12-03 09:38:37.054 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-12-03 09:38:37.091 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-12-03 09:38:37.321 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Boolean Microsoft.EntityFrameworkCore.Migrations.IMigrationsModelDiffer.HasDifferences(Microsoft.EntityFrameworkCore.Metadata.IModel, Microsoft.EntityFrameworkCore.Metadata.IModel)'.
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-03 09:38:37.437 +05:30 [Information] Request finished in 348.0398ms 500 text/html; charset=utf-8
+2020-12-03 09:38:37.974 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/favicon.ico  
+2020-12-03 09:38:37.979 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Boolean Microsoft.EntityFrameworkCore.Migrations.IMigrationsModelDiffer.HasDifferences(Microsoft.EntityFrameworkCore.Metadata.IModel, Microsoft.EntityFrameworkCore.Metadata.IModel)'.
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-03 09:38:38.015 +05:30 [Information] Request finished in 41.512ms 500 text/plain

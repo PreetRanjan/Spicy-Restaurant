@@ -1,0 +1,85 @@
+﻿@model List<Spice.Models.AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="background-white border">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="text-info">Spice Users List</h3>
+        </div>
+        <div class="col-6 text-right">
+            <a class="btn btn-info" asp-area="Identity" asp-controller="Account" asp-action="Register">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+            New Employee Registration</a>
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() == 0)
+    {
+        <p>No user Exists</p>
+    }
+    else
+    {
+        <table id="MyTable" class="table table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Name)</th>
+                    <th>Lock/Unlock</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <h6 class="text-success">@Html.DisplayFor(m => item.Name)</h6>
+                            <small>
+                                @item.Email
+                                @if (item.EmailConfirmed)
+                                {
+                                    <span class="text-success font-weight-bold">[Verified]</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger font-weight-bold">[Not Verified]</span>
+                                }
+                            </small>
+                        </td>
+                        <td>
+                            @if (item.LockoutEnd == null || item.LockoutEnd < DateTime.Now)
+                            {
+                                <h6>UnLocked</h6>
+                                <a asp-action="Lock" asp-route-id="@item.Id" class="btn btn-danger">
+                                    <svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-unlock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z" />
+                                        <path fill-rule="evenodd" d="M8.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
+                                    </svg>
+                                    Lock
+                                </a>
+                            }
+                            else
+                            {
+                                <h6>Locked</h6>
+                                <a asp-action="UnLock" asp-route-id="@item.Id" class="btn btn-success">
+                                    <svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-lock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z" />
+                                        <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
+                                    </svg>
+                                    UnLock
+                                </a>
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div id="paging-first-datatable"></div>
+
+    }
+
+</div>

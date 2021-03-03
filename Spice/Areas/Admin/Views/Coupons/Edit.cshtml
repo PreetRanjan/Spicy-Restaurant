@@ -1,0 +1,84 @@
+﻿@model Spice.Models.ViewModels.CouponViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="border p-2">
+    <h2 class="text-dark">Edit Coupon - @Model.Name</h2>
+    <h6 class="text-secondary">It will be used by Customers for discounts.</h6>
+</div>
+<form method="post" asp-action="Edit" enctype="multipart/form-data" autocomplete="off">
+    <div class="border background-white">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Picture" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Picture" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Picture"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="CouponType" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <select asp-for="CouponType" class="form-control" asp-items="Html.GetEnumSelectList<CouponType>()"></select>
+            </div>
+            <span class="text-danger" asp-validation-for="CouponType"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Discount" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Discount" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Discount"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MinimumAmount" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MinimumAmount" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="MinimumAmount"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="IsActive" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" asp-for="IsActive" class="custom-control-input" id="customSwitch1" checked="">
+                    <label class="custom-control-label" for="customSwitch1">Toggle this Make it Active / In-Active</label>
+                </div>
+
+            </div>
+
+            <span class="text-danger" asp-validation-for="IsActive"></span>
+
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-5 offset-2">
+                <partial name="_UpdateAndBacktoList" />
+            </div>
+        </div>
+    </div>
+</form>

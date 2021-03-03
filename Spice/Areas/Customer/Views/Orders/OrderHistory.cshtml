@@ -1,0 +1,217 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<OrderHeader>
+@{
+    ViewData["Title"] = "OrderHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ var orderAction = (ViewBag.OrderAction).ToString();
+    string active1="", active2="", active3 = "";
+    string headLabel = string.Empty;
+    if (orderAction == "OrderHistory")
+    {
+        active1 = "active";
+        headLabel = "Your Order History!!";
+    }
+    else if (orderAction == "OpenOrders")
+    {
+        active2 = "active";
+        headLabel = "Your Open Orders!!";
+    }
+    else
+    {
+        active3 = "active";
+        headLabel = "Cancelled Orders!!";
+    }
+}
+<div class="bg-light">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a asp-action="OrderHistory" asp-controller="Orders" asp-area="Customer" class="nav-link @active1"><h5 class="p-0">Show All</h5></a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="OpenOrderHistory" asp-controller="Orders" asp-area="Customer" class="nav-link @active2"><h5 class="p-0">Open Orders</h5></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @active3"><h5 class="p-0">Cancelled Orders</h5></a>
+        </li>
+    </ul>
+    <br/>
+    <div class="row">
+        <div class="col-md-8 row">
+            <div class="p-2">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
+                </svg>
+            </div>
+            <div class="p-2">
+                <h5 class="card-title">@headLabel</h5>
+                <p class="text-left">Feel free to contact us for any additional query.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <form asp-action="OrderSearch" asp-area="Customer" method="post" asp-controller="Orders">
+                <label>Search all your orders</label>
+                <input name="orderId" type="text" class="form-control" />
+                <button class="btn btn-dark btn-block">Search</button>
+            </form>
+
+        </div>
+
+    </div>
+    <br/>
+    <div class="">
+        @foreach (var order in Model)
+        {
+            <div class="card mb-2">
+                <div class="card-header">
+                    <div class="row float-left">
+                        <div>
+                            <div class="text-muted">ORDER PLACED</div>
+                            <div>@order.OrderDate.ToString("dd MMM yyyy")</div>
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-muted">TOTAL</div>
+                            <div>₹ @order.OrderTotal</div>
+                        </div>
+                    </div>
+                    @{
+                        string fmt = "000-000#####";
+                    }
+                    <div class="float-right">
+                        <div class="text-muted">ORDER # @order.Id.ToString(fmt)</div>
+                        <div>
+                            <a class="text-info btnDetail modalLink" style="cursor:pointer;" data-id="@order.Id" data-toggle="modal" data-target="#myModal">Order Details</a> |
+                            <a  class="text-info modalLink">Invoice</a>
+                        </div>
+                    </div>
+
+                </div>
+                @{
+                    string bold = "font-weight-bold";
+                    string success = "text-success " + bold;
+                    string danger = "text-danger " + bold;
+                }
+                <div class="card-body">
+                    <div class="row p-1">
+                        <div>
+                            <h5 class="font-weight-bold text-dark">Order @order.Status</h5>
+                            <h6 class="text-muted">Paid on : @order.OrderDate.ToString("dd MMM yyyy")</h6>
+                            <img class="d-block mx-auto" src="~/images/a3cdf279-2d71-4016-bb3b-3437d80c44be..jpg" style="height:80px;width:80px;"/>
+                        </div>
+                        <div class="ml-3 ml-3">
+                            <div class="form-group">
+                                <label class="text-muted">Picker Name</label>
+                                <h6>@order.PickerName</h6>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-muted">Picker Phone</label>
+                                <h6>+91-@order.PickerPhoneNumber</h6>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-outline-secondary">Order Again</button>
+                            </div>
+                        </div>
+                        <div class="form-group ml-3 ml-3">
+                            <label class="text-muted">Payment Status</label>
+                            @if (order.PaymentStatus == PaymentStatus.Successful)
+                            {
+                                <h6 class="@success">@order.PaymentStatus</h6>
+                            }
+                            else
+                            {
+                                <h6 class="@danger">@order.PaymentStatus</h6>
+                            }
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("OrderHistory", new { page = page }),
+new X.PagedList.Mvc.Core.Common.PagedListRenderOptions
+{
+LiElementClasses = new string[] { "page-item" },
+PageClasses = new string[] { "page-link" },
+ContainerDivClasses = new string[] { "pagination pagination-lg" }
+})
+</div>
+
+
+
+
+
+@*<div class="row text-center">
+        <a asp-area="Customer" asp-controller="Orders" asp-action="OrderHistory" asp-route-page="@ViewBag.Page">Show More</a>
+    </div>*@
+<!-- Modal -->
+<div class="modal fade card-white-nue" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            @*<div class="modal-header bg-light text-dark justify-content-center">
+                <h4 class="modal-title" id="exampleModalLabel">Order Details</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>*@
+            <div class="modal-body" id="ModalContent">
+                ...
+            </div>
+            @*<div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>*@
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <partial name="_DataTableScriptsPartial" />
+    <script>
+        var base = "@Url.Content("~/")";
+        //var datatable = new DataTable(document.getElementById('MyTable'), {
+        //    pageSize: 7,
+        //    sort: [true, true, true, true],
+        //    filters: [true],
+        //    filterText: 'Type to filter... ',
+        //    pagingDivSelector: "#paging-first-datatable"
+        $(".btnDetail").click(function () {
+            var button = $(this);
+            var id = button.attr("data-id");
+            var url = base + "Customer/Orders/GetOrderDetails/" + id;
+            $(".swal-content").addClass("text-left");
+            $.get(url).done(function (data) {
+
+                $("#ModalContent").html(data);
+                
+            });
+            var modal = $(".modal-content");
+            console.log(modal[0]);
+            swal({
+                content:modal[0]
+            });
+            /*var button = $(this);
+            var id = button.attr("data-id");
+            var url = base + "Customer/Orders/GetOrderDetails/" + id;
+
+            $.get(url).done(function (data) {
+
+                $("#ModalContent").html(data);
+                $("#myModal").modal('show');
+            });*/
+        });
+            //$(document).ready(function () {
+            //    $(".pagination").removeClass("pagination").addClass("pagination-n");
+            //});
+    </script>
+}
+
+

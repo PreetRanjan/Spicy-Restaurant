@@ -1,0 +1,97 @@
+﻿@model Spice.Models.ViewModels.SubCatagoryViewModel
+@using Spice.Extensions
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="border p-2">
+    <h3 class="text-dark">Edit SubCatagory</h3>
+    <h6 class="text-muted">Edit the subcategory</h6>
+</div>
+
+
+<div class="border background-white">
+    <div class="row">
+        <div class="col-md-8 border-right">
+            <form method="post" asp-action="Edit" autocomplete="off">
+                <input type="hidden" asp-for="SubCatagory.CatagoryId" />
+                <input type="hidden" asp-for="SubCatagory.Id" />
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <label asp-for="SubCatagory.Catagory.Name" class="col-form-label"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <select id="ddlCat" asp-for="SubCatagory.CatagoryId" class="form-control" asp-items="Model.CatagoryList.ToSelectList(Model.SubCatagory.CatagoryId)"></select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <label asp-for="SubCatagory.Name" class="col-form-label"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <input asp-for="SubCatagory.Name" class="form-control" />
+                    </div>
+                    <span class="text-danger" asp-validation-for="SubCatagory.Name"></span>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-5 offset-3">
+                        <partial name="_UpdateAndBacktoList" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-4">
+            @if (Model.SubCatagoryList.Count > 0)
+            {
+                <p>Exsisting Subcategories</p>
+                <div id="subcategoryList">
+
+                </div>
+            }
+            else
+            {
+                <p>No Exsisting Subcategories!!</p>
+            }
+        </div>
+    </div>
+
+
+
+
+</div>
+@section Scripts
+{
+    <script>
+        function UpdateSubCatList() {
+            var catSelected = document.getElementById("ddlCat").value;
+            $list = $("#subcategoryList");
+            $.ajax({
+                url: "/Admin/SubCatagory/GetSubCatagory/" + catSelected,
+                type: "GET",
+                dataType: "text",
+                success: function (results) {
+                    results = JSON.parse(results);
+                    $list.html('');
+                    $list.append('<ul class="list-group">');
+
+                    for (i in results) {
+                        $list.append('<li class="list-group-item">' + results[i].name + "</li>");
+                    }
+                    $list.append("</ul>")
+                }
+            });
+        }
+        $(document).ready(function () {
+            UpdateSubCatList();
+        });
+        $('#ddlCat').on('change', function () {
+
+            UpdateSubCatList();
+        });
+    </script>
+}

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Spice.Models.DTOs.MenuItemDTO>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@if (Model.Count() > 0)
+{
+<div class="col-12 post @Model.FirstOrDefault().CatagoryName.Replace(" ",string.Empty) menu-restaurant">
+
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+<a asp-action="Details" class="hvr-grow bo-shadow" asp-route-slug="@item.Slug">
+    <div class="col-auto m-2 p-3 p-sm-3 mb-2" style="max-width:12rem;max-height:20rem;">
+        <img src="@(item.Image?? "/images/noPoster.png")" class="d-block mx-auto pt-1 mt-2" style="border-radius:5px;border:1px solid #bbb9b9;height:8rem;width:8rem;" />
+        <hr />
+        <h5 class="text-center text-dark">@item.Name</h5>
+        <h5 class="text-white text-center p-1 bg-success">₹ @item.Price</h5>
+        @if (item.IsFeatured)
+        {
+            <span class="featured">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmark-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4zm4.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+                </svg>
+            </span>
+        }
+
+    </div>
+</a>}
+    </div>
+
+
+    <div class="p-4"></div>
+</div> @*<div class="col-12 post @Model.FirstOrDefault().CatagoryName.Replace(" ",string.Empty) menu-restaurant">
+
+        <div class="row justify-content-center">
+            @foreach (var item in Model)
+            {
+            <a asp-action="Details" class="hvr-grow" asp-route-slug="@item.Slug">
+                <div class="col-auto border m-2 p-3 p-sm-0 mb-2 card-white-nue" style="max-width:12rem;max-height:20rem;">
+                    <img src="@item.Image" class="d-block mx-auto pt-1 mt-2" style="border-radius:5px;border:1px solid #bbb9b9;height:8rem;width:8rem;" />
+                    <hr />
+                    <h5 class="text-center text-dark">@item.Name</h5>
+                    <h5 class="text-dark text-center">₹ @item.Price</h5>
+
+                </div>
+            </a>
+
+                            }
+        </div>
+
+
+        <div class="p-4"></div>
+    </div>*@}

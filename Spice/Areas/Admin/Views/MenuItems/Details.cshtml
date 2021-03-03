@@ -1,0 +1,49 @@
+﻿@model Spice.Models.ViewModels.MenuItemViewModel
+@using Spice.Extensions
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+<div class="border p-2">
+    <h3 class="text-dark">MenuItem Details - @Model.MenuItem.Name</h3>
+    <h6 class="text-muted">Menuitem details of the Item</h6>
+</div>
+
+
+
+    <div class="border background-white">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="@(Model.MenuItem.Image?? "/images/noPoster.png")" />
+            </div>
+            <div class="col-md-8">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <h6>Name - @Model.MenuItem.Name</h6>
+                    </div>
+                    <div class="list-group-item">
+                        <h6>Description - @Html.Raw(Model.MenuItem.Description)</h6>
+                    </div>
+                    <div class="list-group-item">
+                        <h6>Category - @Model.MenuItem.Catagory.Name</h6>
+                    </div>
+                    <div class="list-group-item">
+                        <h6>Subcategory - @Model.MenuItem.SubCatagory.Name</h6>
+                    </div>
+                    <div class="list-group-item">
+                        <h6>Price - ₹ @Model.MenuItem.Price</h6>
+                    </div>
+                    <div class="list-group-item">
+                        <h6>Spicyness - @Model.MenuItem.Spicyness</h6>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12 offset-2">
+                        <partial name="_BacktoList" model="Model.MenuItem.Id" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

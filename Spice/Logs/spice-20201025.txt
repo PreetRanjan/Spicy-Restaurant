@@ -1,0 +1,141 @@
+2020-10-25 18:24:41.136 +05:30 [Information] User profile is available. Using '"C:\Users\PREET\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-10-25 18:24:50.423 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-10-25 18:24:50.428 +05:30 [Information] Hosting environment: "Development"
+2020-10-25 18:24:50.431 +05:30 [Information] Content root path: "F:\Developer\CODE\NETCore\Spice\Spice"
+2020-10-25 18:24:50.602 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-25 18:24:50.922 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-25 18:24:51.295 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-25 18:24:53.903 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-25 18:24:56.503 +05:30 [Information] Executed DbCommand ("210"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-25 18:24:56.688 +05:30 [Information] Executed DbCommand ("61"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-25 18:24:56.797 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-25 18:24:57.421 +05:30 [Information] Executed ViewResult - view "Index" executed in 685.532ms.
+2020-10-25 18:24:57.424 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 6128.0912ms
+2020-10-25 18:24:57.427 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-25 18:24:57.457 +05:30 [Information] Request finished in 6865.2786ms 200 text/html; charset=utf-8
+2020-10-25 18:24:58.216 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-25 18:24:58.245 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/50off.jpg  
+2020-10-25 18:24:58.248 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/css/standard.min.css  
+2020-10-25 18:24:58.307 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/Untitled-1.jpg  
+2020-10-25 18:24:58.307 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/coupons/First.jpg  
+2020-10-25 18:24:58.307 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/18c17ad4-b0be-4e28-bbac-0a9a2052889f..jpg  
+2020-10-25 18:24:58.350 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/013719ea-8b20-4269-914a-187bb9206829..jpg  
+2020-10-25 18:24:58.379 +05:30 [Information] Request finished in 163.0827ms 404 
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/images/013719ea-8b20-4269-914a-187bb9206829..jpg" was not modified
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/images/coupons/First.jpg" was not modified
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/images/coupons/50off.jpg" was not modified
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/css/standard.min.css" was not modified
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/images/18c17ad4-b0be-4e28-bbac-0a9a2052889f..jpg" was not modified
+2020-10-25 18:24:58.413 +05:30 [Information] The file "/images/coupons/Untitled-1.jpg" was not modified
+2020-10-25 18:24:58.419 +05:30 [Information] Request finished in 112.6545ms 304 image/jpeg
+2020-10-25 18:24:58.419 +05:30 [Information] Request finished in 69.1322ms 304 image/jpeg
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/7bd1dffd-07a8-4cf4-b480-bac27f552dfb..jpg  
+2020-10-25 18:24:58.420 +05:30 [Information] Request finished in 112.5869ms 304 image/jpeg
+2020-10-25 18:24:58.419 +05:30 [Information] Request finished in 171.7644ms 304 text/css
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/designs/spiceLogoonly.png  
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/c14b3202-515d-48cb-9cb2-f0c3a86e2c57..jpg  
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/510c8c25-8dd1-4add-a332-b606a20ca8b0..jpg  
+2020-10-25 18:24:58.420 +05:30 [Information] Request finished in 113.0682ms 304 image/jpeg
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/b3ea993b-27e6-4dda-b520-4935e86c299b..jpg  
+2020-10-25 18:24:58.420 +05:30 [Information] Request finished in 175.3451ms 304 image/jpeg
+2020-10-25 18:24:58.420 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/2c429788-35c1-4826-b3df-63a5484bed89..jpg  
+2020-10-25 18:24:58.420 +05:30 [Information] The file "/images/7bd1dffd-07a8-4cf4-b480-bac27f552dfb..jpg" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/2c429788-35c1-4826-b3df-63a5484bed89..jpg" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] Request finished in 1.0336ms 304 image/jpeg
+2020-10-25 18:24:58.421 +05:30 [Information] Request finished in 0.275ms 304 image/jpeg
+2020-10-25 18:24:58.421 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/531d8496-2ddc-4172-b89c-e698e80019a3..jpg  
+2020-10-25 18:24:58.421 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/afe1c2ab-1359-410a-a630-9f1a45458164..jpg  
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/designs/spiceLogoonly.png" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/c14b3202-515d-48cb-9cb2-f0c3a86e2c57..jpg" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] Request finished in 1.1613ms 304 image/png
+2020-10-25 18:24:58.421 +05:30 [Information] Request finished in 1.2036ms 304 image/jpeg
+2020-10-25 18:24:58.421 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/99024912-6ac8-4943-b686-386a4b30394d..jpg  
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/afe1c2ab-1359-410a-a630-9f1a45458164..jpg" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] Request finished in 0.6144ms 304 image/jpeg
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/510c8c25-8dd1-4add-a332-b606a20ca8b0..jpg" was not modified
+2020-10-25 18:24:58.422 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/7478dd3c-542b-4292-8504-b844170d80a4..jpg  
+2020-10-25 18:24:58.422 +05:30 [Information] Request finished in 1.9672ms 304 image/jpeg
+2020-10-25 18:24:58.422 +05:30 [Information] The file "/images/7478dd3c-542b-4292-8504-b844170d80a4..jpg" was not modified
+2020-10-25 18:24:58.421 +05:30 [Information] The file "/images/99024912-6ac8-4943-b686-386a4b30394d..jpg" was not modified
+2020-10-25 18:24:58.422 +05:30 [Information] Request finished in 0.2483ms 304 image/jpeg
+2020-10-25 18:24:58.422 +05:30 [Information] Request finished in 0.5162ms 304 image/jpeg
+2020-10-25 18:24:58.421 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/images/a3cdf279-2d71-4016-bb3b-3437d80c44be..jpg  
+2020-10-25 18:24:58.422 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/js/standard.min.js  
+2020-10-25 18:24:58.422 +05:30 [Information] The file "/images/a3cdf279-2d71-4016-bb3b-3437d80c44be..jpg" was not modified
+2020-10-25 18:24:58.422 +05:30 [Information] The file "/js/standard.min.js" was not modified
+2020-10-25 18:24:58.422 +05:30 [Information] Request finished in 0.9774ms 304 image/jpeg
+2020-10-25 18:24:58.422 +05:30 [Information] Request finished in 0.5097ms 304 application/javascript
+2020-10-25 18:24:58.459 +05:30 [Information] The file "/images/531d8496-2ddc-4172-b89c-e698e80019a3..jpg" was not modified
+2020-10-25 18:24:58.459 +05:30 [Information] Request finished in 38.4309ms 304 image/jpeg
+2020-10-25 18:24:58.460 +05:30 [Information] The file "/images/b3ea993b-27e6-4dda-b520-4935e86c299b..jpg" was not modified
+2020-10-25 18:24:58.460 +05:30 [Information] Request finished in 40.1875ms 304 image/jpeg
+2020-10-25 18:24:59.553 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-25 18:24:59.954 +05:30 [Information] Request finished in 401.6133ms 404 
+2020-10-25 18:34:10.849 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/menuitems/samosa  
+2020-10-25 18:34:10.852 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-25 18:34:10.907 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Details\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.String)" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-25 18:34:11.075 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-25 18:34:11.295 +05:30 [Information] Executed DbCommand ("129"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-25 18:34:11.449 +05:30 [Information] Executed DbCommand ("24"ms) [Parameters=["@__slug_0='?' (Size = 160)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[CatagorId], [m].[Description], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [m].[SubCatagorId], [c].[Id], [c].[Description], [c].[Name], [s].[Id], [s].[CatagoryId], [s].[Name]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[Slug] = @__slug_0"
+2020-10-25 18:34:11.641 +05:30 [Information] Executing ViewResult, running view "Details".
+2020-10-25 18:34:11.870 +05:30 [Information] Executed DbCommand ("46"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]
+WHERE [m].[IsFeatured] = CAST(1 AS bit)"
+2020-10-25 18:34:11.969 +05:30 [Information] Executed ViewResult - view "Details" executed in 341.9233ms.
+2020-10-25 18:34:11.973 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Details (Spice)" in 1065.285ms
+2020-10-25 18:34:11.973 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Details (Spice)"'
+2020-10-25 18:34:11.973 +05:30 [Information] Request finished in 1124.6038ms 200 text/html; charset=utf-8
+2020-10-25 18:34:12.114 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.js  
+2020-10-25 18:34:12.116 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/lib/snackbar/snackbar.min.css  
+2020-10-25 18:34:12.131 +05:30 [Information] The file "/lib/snackbar/snackbar.min.js" was not modified
+2020-10-25 18:34:12.131 +05:30 [Information] The file "/lib/snackbar/snackbar.min.css" was not modified
+2020-10-25 18:34:12.132 +05:30 [Information] Request finished in 15.944ms 304 text/css
+2020-10-25 18:34:12.132 +05:30 [Information] Request finished in 18.0092ms 304 application/javascript
+2020-10-25 18:41:49.344 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 20
+2020-10-25 18:41:49.369 +05:30 [Information] Authorization failed.
+2020-10-25 18:41:49.391 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-10-25 18:41:49.393 +05:30 [Information] Request finished in 50.706ms 401 
+2020-10-25 18:41:54.243 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44356/Customer/Home/AddtoCart application/x-www-form-urlencoded; charset=UTF-8 20
+2020-10-25 18:41:54.253 +05:30 [Information] Authorization failed.
+2020-10-25 18:41:54.254 +05:30 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2020-10-25 18:41:54.255 +05:30 [Information] Request finished in 11.86ms 401 
+2020-10-25 18:41:56.080 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/  
+2020-10-25 18:41:56.083 +05:30 [Information] Executing endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-25 18:41:56.083 +05:30 [Information] Route matched with "{area = \"Customer\", action = \"Index\", controller = \"Home\", page = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Spice.Controllers.HomeController" ("Spice").
+2020-10-25 18:41:56.149 +05:30 [Information] Entity Framework Core "3.1.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-10-25 18:41:56.207 +05:30 [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Name] AS [CatagoryName], [m].[Description], [m].[Id], [m].[Image], [m].[IsFeatured], [m].[Name], [m].[Price], [m].[Slug], [m].[Spicyness], [s].[Name] AS [SubCatagoryName]
+FROM [MenuItems] AS [m]
+INNER JOIN [Catagories] AS [c] ON [m].[CatagorId] = [c].[Id]
+INNER JOIN [SubCatagories] AS [s] ON [m].[SubCatagorId] = [s].[Id]"
+2020-10-25 18:41:56.216 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CouponType], [c].[Discount], [c].[Name], [c].[Picture]
+FROM [Coupons] AS [c]
+WHERE [c].[IsActive] = CAST(1 AS bit)"
+2020-10-25 18:41:56.217 +05:30 [Information] Executing ViewResult, running view "Index".
+2020-10-25 18:41:56.249 +05:30 [Information] Executed ViewResult - view "Index" executed in 31.6658ms.
+2020-10-25 18:41:56.249 +05:30 [Information] Executed action "Spice.Controllers.HomeController.Index (Spice)" in 165.3658ms
+2020-10-25 18:41:56.249 +05:30 [Information] Executed endpoint '"Spice.Controllers.HomeController.Index (Spice)"'
+2020-10-25 18:41:56.250 +05:30 [Information] Request finished in 169.3044ms 200 text/html; charset=utf-8
+2020-10-25 18:41:56.344 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44356/template/js/parallax.min.js  
+2020-10-25 18:41:56.352 +05:30 [Information] Request finished in 8.0088ms 404 

@@ -1,0 +1,140 @@
+﻿@model OrderDetailsViewModel
+<div class="p-2">
+    @{
+        string fmt = "000-000#####";
+    }
+    <h4 class="text-dark">Order Details</h4>
+    <div>
+        <div class="form-group">
+            <h6 class="text-muted">Order ID</h6>
+            <h6>#@Model.OrderHeader.Id.ToString(fmt)</h6>
+        </div>
+        <div class="form-group">
+            <h6 class="text-muted">Transaction ID</h6>
+            <h6>#@Model.OrderHeader.TransactionId</h6>
+        </div>
+        <div class="form-group">
+            <h6 class="text-muted">Name</h6>
+            <h6>@Model.OrderHeader.PickerName</h6>
+        </div>
+        <div class="form-group">
+            <h6 class="text-muted">Phone</h6>
+            <h6>+91-@Model.OrderHeader.PickerPhoneNumber</h6>
+        </div>
+        <div class="form-group">
+            <h6 class="text-muted">Order Status</h6>
+            <h6>@Model.OrderHeader.Status</h6>
+        </div>
+        <h6 class="text-muted">Items Ordered</h6>
+        <ul>
+            @foreach (var item in Model.OrderDetails)
+            {
+                <li>@item.Name X @item.Count</li>
+            }
+        </ul>
+        <h5>Order Total -<span class="text-success font-weight-bold">₹ @Model.OrderHeader.OrderTotal </span> </h5>
+        <h6>Payment Status - @Model.OrderHeader.PaymentStatus</h6>
+        <hr />
+        <button class="btn btn-block">Generate Invoice</button>
+    </div>
+</div>
+@*<div class="row card-nue p-4">
+    <div class="col-md-8">
+        <div style="border-radius:8px 8px;" class="list-group-item list-group-item-action list-group-item-success active">
+
+            <h4>
+                Order Details 
+                
+            </h4>
+
+        </div>
+        <div class="p-4 text-muted card-white-nue">
+
+            
+            <h5 class="text-muted p-2">
+                Name : @Model.OrderHeader.PickerName
+            </h5>
+            <h5 class="p-2">
+                Phone :
+                +91-@Model.OrderHeader.PickerPhoneNumber
+            </h5>
+            <h5 class="p-2">
+                Date :
+                @Model.OrderHeader.PickUpTime.ToShortDateString()
+            </h5>
+            <h5 class="p-2">
+                Time :
+                @Model.OrderHeader.PickUpTime.ToShortTimeString()
+            </h5>
+            <h4 class="p-2">
+                Order Total :
+                ₹ @Model.OrderHeader.OrderTotal
+            </h4>
+            <h5 class="p-2">
+                Additional Instructions :
+                @(Model.OrderHeader.Comments ?? "No additional Instruction")
+            </h5>
+        </div>
+        
+    </div>
+    <div class="col-md-4">
+
+        <ul class="list-group card-white-nue">
+            <li class="list-group-item list-group-item-action list-group-item-success active">
+                
+                <h4>
+                    Order ID :
+                    <span class="badge badge-success">@Model.OrderHeader.Id</span>
+                </h4>
+
+            </li>
+            @foreach (var item in Model.OrderDetails)
+            {
+                <li class="list-group-item list-group-item-action d-flex justify-content-between">
+                    <div>
+                        <h5>@item.Name</h5>
+                        <h6>Quantity : @item.Count</h6>
+                    </div>
+                    <span>₹ @item.Price.ToString("0.00")</span>
+                </li>
+
+            }
+
+            @if (Model.OrderHeader.CouponCode != null)
+            {
+                <li class="list-group-item card-white-nue promo-card text-white d-flex justify-content-between">
+                    <div>
+                        <h5>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tag-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                            </svg>
+                            COUPON CODE
+                        </h5>
+                        <h6>@Model.OrderHeader.CouponCode</h6>
+                    </div>
+                    <span>₹ @Model.OrderHeader.CouponCodeDiscount</span>
+                </li>
+            }
+
+            <li class="list-group-item font-weight-bold list-group-item-action d-flex justify-content-between">
+                <div>
+                    <h3>Total</h3>
+                </div>
+                <h3 class="font-weight-bold">₹ @Model.OrderHeader.OrderTotal</h3>
+            </li>
+            
+            <li class="list-group-item card-white-nue promo-card text-white d-flex justify-content-between">
+                <div>
+                    <h5>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tag-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                        Payment :
+                    </h5>
+                    <h6>@Model.OrderHeader.PaymentStatus</h6>
+                </div>
+                <span>@Model.OrderHeader.PaymentStatus</span>
+            </li>
+        </ul>
+    </div>
+</div>*@
