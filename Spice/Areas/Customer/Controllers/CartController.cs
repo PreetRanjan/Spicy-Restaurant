@@ -248,6 +248,7 @@ namespace Spice.Areas.Customer.Controllers
             await db.SaveChangesAsync();
             DetailCart.OrderHeader.TransactionId = new Random().Next().ToString();
             DetailCart.OrderHeader.PaymentStatus = PaymentStatus.Successful;
+            DetailCart.OrderHeader.Status = OrderStatus.Submitted;
             //    DetailCart.OrderHeader.Status = OrderStatus.Submitted;
             //Charge from payment gateway
             //var options = new ChargeCreateOptions
